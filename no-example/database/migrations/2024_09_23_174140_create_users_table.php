@@ -11,8 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('flights', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('author');
+            $table->string('editorial');
+            $table->integer('type_id');
+            $table->integer('quantity');
+            $table->integer('npages');
+            $table->integer('format_id');
+            $table->boolean('available')->default(1);
             $table->timestamps();
         });
     }
