@@ -1,0 +1,39 @@
+version: '2.1'
+
+services:
+  #score-app: ONLY ON MAC
+    #build:
+      #args:
+        #user: name.surname # run `whoami` to get your username
+        #uid: 401 # run `id -u` to get your UID
+
+  score-nginx:
+    ports:
+      - 8080:80
+
+  score-db:
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_ARBITRARY: 1
+      UPLOAD_LIMIT: 200M
+    ports:
+      - 8000:80
+    networks:
+      - score
+    restart: always
+
+
+  mailhog:
+    container_name: mailhog
+    image: mailhog/mailhog:v1.0.0
+    ports:
+      - 1025:1025
+      - 8025:8025
+    networks:
+      - score
+    restart: always
