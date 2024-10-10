@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('draws', function (Blueprint $table) {
             $table->id();
             $table->foreignId('crews_id')->constrained(
-                table: 'crews', indexName: 'crews_id'
+                table: 'crews', indexName: 'crewsDraws_id'
             );
             $table->foreignId('location_id')->constrained(
-                table: 'location', indexName: 'location_id'
+                table: 'location', indexName: 'locationDraws_id'
             );
             $table->timestamps();
         });

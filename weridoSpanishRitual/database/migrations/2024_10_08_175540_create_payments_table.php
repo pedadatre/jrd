@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('import');
             $table->boolean('status');
-            $table->foreignId('user_crew')->constrained(
-                table: 'user_crews', indexName: 'users_crews_id'
+            $table->foreignId('user_crew_id')->constrained(
+                table: 'user_crew', indexName: 'user_crew_id'
             );
             $table->foreignId('crews_id')->constrained(
-                table: 'crews', indexName: 'crews_id'
+                table: 'crews', indexName: 'crewsPayments_id'
             );
             $table->timestamps();
         });
