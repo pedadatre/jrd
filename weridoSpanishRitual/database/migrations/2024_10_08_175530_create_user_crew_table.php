@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('user_crew', function (Blueprint $table) {
             $table->id();
             $table->foreignId('crews_id')->constrained(
-                table: 'crews', indexName: 'crewsUserCrew_id'
+                table: 'crews', indexName: 'crews_id'
             );
             $table->foreignId('users_id')->constrained(
-                table: 'users', indexName: 'usersUserCrew_id'
+                table: 'users', indexName: 'users_id'
             );
             $table->timestamps();
         });
