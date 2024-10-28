@@ -1,8 +1,11 @@
-vendor/
-node_modules/
-package-lock.json
-config/
-docker-compose.yml
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
 .env
 .env.backup
 .env.production
