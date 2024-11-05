@@ -1,26 +1,26 @@
-<div class="bg-green-600">
-    <header class="grid grid-cols-2 items-center gap-2 py-1 lg:grid-cols-3">
+<div class="bg-gray-800">
+    <header class="grid grid-cols-2 items-center px-4">
         <div>
 
-            <div>
+            <div class="py-1">
                 <img src="https://raw.githubusercontent.com/hatsumiku03/jrd/refs/heads/test/weridoSpanishRitual/public/mikic.png" width="50px">
             </div>
 
         </div>
 
             @if (Route::has('login'))
-                <nav class="flex flex-1 justify-end">
+                <nav class="flex items-stretch ml-auto">
             @auth
                 <a
                     href="{{ url('/dashboard') }}"
-                                class="rounded-md px-3 py-2 ring-1 dark:text-white dark:hover:text-white/dark:focus-visible:ring-white"
+                                class="px-3 py-2 dark:text-white text-white"
                 >
                     Dashboard
                 </a>
                 @else
                 <a
                     href="{{ route('login') }}"
-                    class="rounded-md px-3 py-2 ring-1 dark:text-white dark:hover:text-white/dark:focus-visible:ring-white"
+                    class="px-3 py-2 dark:text-white text-white"
                 >
                     Log in
                 </a>
@@ -28,7 +28,7 @@
                 @if (Route::has('register'))
                     <a
                         href="{{ route('register') }}"
-                                    class="rounded-md px-3 py-2 ring-1 dark:text-white dark:hover:text-white/dark:focus-visible:ring-white"
+                                    class="px-3 py-2 dark:text-white text-white"
                     >
                         Register
                     </a>
@@ -37,4 +37,5 @@
         </nav>
     @endif
 </header>
+</div>
 </div>
