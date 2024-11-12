@@ -11,11 +11,12 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
-        <script src="https://cdn.tailwindcss.com"></script>
+        @vite('resources/css/app.css')
     </head>
     <body class="font-sans antialiased bg-black text-white/50">
 
         @include('components.nav-bar')
 
+        @include('components.footer')
     </body>
 </html>

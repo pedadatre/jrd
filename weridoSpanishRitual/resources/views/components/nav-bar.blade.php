@@ -1,4 +1,4 @@
-<div class="bg-gray-800">
+<div class="bg-gray-800 py-2">
     <header class="grid grid-cols-2 items-center px-4">
         <div>
 
