@@ -2,6 +2,7 @@
 
 5:
 [X] Diferenciación entre usuarios admin y no-admin
+[] CRUD de peñas para admin
 
 [] Backoffice
     [] Poder aceptar que los usuarios se unan a las peñas
@@ -10,7 +11,7 @@
     [] Ver los usuarios que hay en cada peña
     [] Aceptar la solicitud de un usuario a la peña
 
-[] Front office
+[] Frontoffice
     [X] Ver la página principal
     [] Ver listado de peñas
     [] Solicitudes a peñas
@@ -25,6 +26,8 @@
     [] About section
     [] Ubicación donde se realizará la festividad de peñas
     [] Página de contacto + formulario de contacto->(Atención al cliente)
+    [] Navbar para administrador ya logeado
+    [] Navbar para usuarios log y no log
 
 
 7:

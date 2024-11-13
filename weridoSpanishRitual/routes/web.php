@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/crew', function(){
+    return view('penya');
+});
+
 Route::get('/dashboard', function () {
     $usr_data = User::all();
     return view('dashboard', compact('usr_data'));
