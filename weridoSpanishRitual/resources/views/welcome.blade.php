@@ -14,8 +14,10 @@
         @vite('resources/css/app.css')
     </head>
     <body class="font-sans antialiased bg-black text-white/50">
+        
+    @include('components.nav-bar')
 
-        @include('components.nav-bar')
+    
 
         @include('components.footer')
     </body>

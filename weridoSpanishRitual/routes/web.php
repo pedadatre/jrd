@@ -4,8 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (User $users) {
+    return view('welcome')->with('users', $users);
 });
 
 Route::get('/crew', function(){

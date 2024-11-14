@@ -19,15 +19,15 @@
     [] Poder ver datos personales
 
 [] Home
-    [] Header + Footer
+    [X] Header + Footer
     [] Foto principal y banner
     [] Carosel / slider de imagenes (ver como implementar)
     [] Programación de las fiestas
     [] About section
     [] Ubicación donde se realizará la festividad de peñas
     [] Página de contacto + formulario de contacto->(Atención al cliente)
-    [] Navbar para administrador ya logeado
-    [] Navbar para usuarios log y no log
+    [X] Navbar para administrador ya logeado
+    [X] Navbar para usuarios log y no log
 
 
 7:
