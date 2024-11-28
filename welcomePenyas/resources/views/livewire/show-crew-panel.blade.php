@@ -6,7 +6,7 @@
         </div>
         
         <x-input type="text" wire:model.live="search" placeholder="Search a crew..." />
-        
+                
     </div>
 
             <table class="w-full text-sm text-left rtl:text-right text-gray-400">
