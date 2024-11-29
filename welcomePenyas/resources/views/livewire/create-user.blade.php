@@ -1,5 +1,5 @@
 <div>
-    <form>
+    {{-- <form>
         @csrf
         <div>
             <x-label for="name" value="{{ __('Name') }}" />
@@ -25,5 +25,7 @@
             <x-label for="role" value="{{ __('Role') }}" />
             <x-input id="role" class="block mt-1 w-full" type="role" name="role" required />
         </div>
-    </form>
+    </form> --}}
+
+    <div class="text-white">mr babu</div>
 </div>
