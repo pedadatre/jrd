@@ -13,7 +13,9 @@ class ShowUserPanel extends Component
     use WithPagination;
 
     public $search;
-    
+
+    public $userCreation = false;
+
     // º User parameters º //
     public $userData = [];
 
@@ -21,7 +23,6 @@ class ShowUserPanel extends Component
     public $surname;
     public $email;
     public $role_id;
-
 
     // º Mount the user database data by id º //
     public function mount(){
@@ -34,9 +35,15 @@ class ShowUserPanel extends Component
     protected $messages = [ 
         'userData.*.name.required' => 'You must gave a name!!!11.', 
         'userData.*.email.required' => 'You must put here a email dumbass.', 
-    // Add more custom messages as needed 
+        // ! Add more custom messages as needed 
     ];
 
+
+    // º Emit AdministratorPanel to create an user º //
+    public function createUserPopup(){
+        // $this->dispatch('u');
+        $this->userCreation = !$this->userCreation;
+    }
 
 
     // º Create users in the panel (working) º //
@@ -45,7 +52,6 @@ class ShowUserPanel extends Component
             $this->only('name', 'surname', 'email', 'role_id')
         );
     }
-
 
 
     // º Modify method for update the users º //

@@ -9,8 +9,13 @@
 
         <!-- Trabajando en q este bóton quede bien xD --> 
         <div class="grid">
-            <button type="button" wire:click="" class="w-fit mt-2 row-end-12 text-white bg-gray-900 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5">Create User</button>
+            <button type="button" wire:click="createUserPopup" class="w-fit mt-2 row-end-12 text-white bg-gray-900 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5">Create User</button>
         </div>
+
+        @if ($userCreation)
+            @livewire('create-user')
+        @endif
+        
         
     </div>
     <table class="w-full text-sm text-left rtl:text-right text-gray-400">
