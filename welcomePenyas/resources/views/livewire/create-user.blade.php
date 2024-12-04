@@ -45,9 +45,9 @@
                     </div>
             
                     <div class="mt-4">
-                        <x-label for="profile_photo" value="{{ __('Profile Photo') }}" class="block mb-2 text-sm font-medium text-white" />
-                        <x-input id="profile_photo" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file" wire:model="profile_photo" />
-                        @error('profile_photo') <span class="text-red-500">{{ $message }}</span> @enderror
+                        <x-label for="profile_photo_path" value="{{ __('Profile Photo') }}" class="block mb-2 text-sm font-medium text-white" />
+                        <x-input id="profile_photo_path" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file" wire:model="profile_photo_path" />
+                        @error('profile_photo_path') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
             
                     <div class="mt-4">
