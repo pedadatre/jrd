@@ -5,10 +5,12 @@ namespace App\Livewire;
 use App\Models\Crew;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\WithFileUploads;
 
 class ShowCrewPanel extends Component
 {
     use WithPagination;
+    use WithFileUploads;
 
     public $search = '';
     

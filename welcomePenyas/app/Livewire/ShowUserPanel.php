@@ -12,7 +12,7 @@ class ShowUserPanel extends Component
 {
     use WithPagination;
 
-    public $search;
+    public $search = '';
 
     public $userCreation = false;
 
@@ -41,8 +41,8 @@ class ShowUserPanel extends Component
 
     // º Emit AdministratorPanel to create an user º //
     public function createUserPopup(){
-        // $this->dispatch('u');
-        $this->userCreation = !$this->userCreation;
+        $this->dispatch('user-create');
+        // $this->userCreation = !$this->userCreation;
     }
 
 

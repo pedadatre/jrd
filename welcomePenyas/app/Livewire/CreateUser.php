@@ -7,11 +7,13 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\Role;
+use Livewire\Attributes\On; 
 
 class CreateUser extends Component
 {
     use WithFileUploads;
 
+    public $userCreation;
     // º User variables for the form º //
     public $name;
     public $surname;
@@ -23,9 +25,15 @@ class CreateUser extends Component
     public $role;
     public $roles;
 
+    #[On('user-create')]
+    public function userCreate(){
+        $this->userCreation = true;
+    }
+
     // º Mount roles as a reference of the role table  º //
-    public function mount()
+    public function mount($userCreation)
     {
+        $this->userCreation = $userCreation;
         $this->roles = Role::all();
     }
 
@@ -33,7 +41,7 @@ class CreateUser extends Component
     protected $rules = [
         'name' => 'required|string|max:255',
         'surname' => 'nullable|string|max:255',
-        'email' => 'required|email|max:255',
+        'email' => 'required|email|max:255|unique:users,email',
         'password' => 'required|string|min:8',
         'profile_photo_path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         'role' => 'required|exists:roles,id',
